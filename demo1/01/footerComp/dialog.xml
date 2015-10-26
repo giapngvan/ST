@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Title"
+    title="Person"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <title
+            jcr:primaryType="cq:Widget"
+            fieldLabel="First Name"
+            name="./firstName"
+            xtype="textfield"/>
+        <link
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Last Name"
+            name="./lastName"
+            xtype="textfield"/>
+        <email
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Email"
+            name="./email"
+            xtype="textfield"/>
+        <mobile
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Mobile"
+            name="./mobile"
+            xtype="numberfield"/>
+		 <definitions
+		     jcr:primaryType="cq:Widget"
+		     fieldLabel="Definitions"
+		     name="./definitions"
+		     orderable="{Boolean}true"
+		     xtype="multifield">
+		     <fieldConfig
+		         jcr:primaryType="cq:Widget"
+		         xtype="multifieldpanel">
+		         <items jcr:primaryType="cq:WidgetCollection">
+		             <term
+		                 jcr:primaryType="cq:Widget"
+		                 fieldLabel="Term"
+		                 key="term"
+		                 width="250"
+		                 xtype="textfield"/>
+		             <definition
+		                 jcr:primaryType="cq:Widget"
+		                 fieldLabel="Definition"
+		                 key="definition"
+		                 width="250"
+		                 xtype="textarea"/>
+		         </items>
+		     </fieldConfig>
+		 </definitions>            
+		    </items>
+</jcr:root>

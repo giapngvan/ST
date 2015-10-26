@@ -1,0 +1,16 @@
+<p>This is your Sightly componentAAA</p>
+<div data-sly-use.heroTextObject="org.test1.test1.core.HeroTextComponent" data-sly-test="${heroTextObject}">
+       <p>${heroTextObject.person.firstName}</p>
+       <p>${heroTextObject.person.lastName}</p>
+       <p>${heroTextObject.person.email}</p>
+       <p>${heroTextObject.person.mobile}</p>       
+</div>
+ <div data-sly-use.footerUse="org.test1.test1.core.FooterComponent">
+    <div>
+        <ul data-sly-list.link="${footerUse.footer.socialLinks}">
+            <li><a href="${link.link}">${link.name}</a></li>
+        </ul>
+    </div>
+</div>
+
+
